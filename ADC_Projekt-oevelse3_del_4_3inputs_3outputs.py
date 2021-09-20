@@ -4,7 +4,7 @@ from machine import Pin, ADC
 # Importere sleep_ms fra time modulet
 from time import sleep_ms
 
-# Følgende er til RGB modulet:
+# Følgende er til RGB komponentet:
 # Instantierer et Pin objekt med navnet r (rød) på pin 18, sat som OUTput, og værdien 1 (slukket, da den er omvendt)
 r = Pin(18, Pin.OUT, value=1)
 # Instantierer et Pin objekt med navnet g (grøn) på pin 19, sat som OUTput, og værdien 1 (slukket, da den er omvendt)
@@ -12,27 +12,27 @@ g = Pin(19, Pin.OUT, value=1)
 # Instantierer et Pin objekt med navnet b (blå) på pin 5, sat som OUTput, og værdien 1 (slukket, da den er omvendt)
 b = Pin(5, Pin.OUT, value=1)
 
-# Følgende er til vibrator modulet:
+# Følgende er til vibrator komponentet:
 # Instantierer et Pin objekt med navnet vibrate på pin 16, sat som OUTput, og værdien 0
 vibrate = Pin(16, Pin.OUT, value=0)
 
-# Følgende er til buzzer modulet:
+# Følgende er til buzzer komponentet:
 # Instantierer et Pin objekt med navnet buzz på pin 14, sat som OUTput, og værdien 0
 buzz = Pin(4, Pin.OUT, value=0)
 
-# Følgende er til temperatursensor modulet:
+# Følgende er til temperatursensor komponentet:
 # Instantierer et ADC objekt med navnet temp på pin 36
 temp = ADC(Pin(36))
 temp.atten(ADC.ATTN_11DB)  # Attenuationen sættes til 11DB med maximum tilladt spænding på 3.6 volt
 temp.width(ADC.WIDTH_12BIT)  # Opløsningen sættes til 12BIT (4096)
 
-# Følgende er til Light Dependant Resistor (LDR) modulet:
+# Følgende er til Light Dependant Resistor (LDR) komponentet:
 # Instantierer et ADC objekt med navnet ldr på pin 32
 ldr = ADC(Pin(32))
 ldr.atten(ADC.ATTN_11DB)  # Attenuationen sættes til 11DB med maximum tilladt spænding på 3.6 volt
 ldr.width(ADC.WIDTH_12BIT)  # Opløsningen sættes til 12BIT (4096)
 
-# Følgende er til potentiometer modulet:
+# Følgende er til potentiometer komponentet:
 # Instantierer et ADC objekt med navnet pot på pin 33
 pot = ADC(Pin(33))
 pot.atten(ADC.ATTN_11DB)  # Attenuationen sættes til 11DB med maximum tilladt spænding på 3.6 volt

@@ -3,7 +3,7 @@ from machine import Pin, ADC
 # Importere sleep_ms fra time modulet
 from time import sleep
 
-# Følgende er til Lyskryds modulet:
+# Følgende er til Lyskryds komponentet:
 # Instantierer et Pin objekt med navnet r (rød) på pin 5, sat som OUTput, og værdien 0 (slukket)
 r = Pin(5, Pin.OUT, value=0)
 # Instantierer et Pin objekt med navnet g (grøn) på pin 16, sat som OUTput, og værdien 0 (slukket)
@@ -11,7 +11,7 @@ g = Pin(16, Pin.OUT, value=0)
 # Instantierer et Pin objekt med navnet y (yellow) på pin 17, sat som OUTput, og værdien 0 (slukket)
 y = Pin(17, Pin.OUT, value=0)
 
-# Følgende er til potentiometer modulet:
+# Følgende er til potentiometer komponentet:
 # Instantierer et ADC objekt med navnet pot på pin 32
 adc_pot = ADC(Pin(32))
 # Attenuationen sættes til 11DB med maximum tilladt spænding på 3.6 volt
