@@ -1,4 +1,4 @@
-# Imortere Pin og ADC klasserne fra machine modulet
+# Importere Pin og ADC klasserne fra machine modulet
 from machine import Pin, ADC
 
 # Importere sleep_ms fra time modulet
@@ -17,7 +17,7 @@ b = Pin(5, Pin.OUT, value=1)
 vibrate = Pin(16, Pin.OUT, value=0)
 
 # Følgende er til buzzer komponentet:
-# Instantierer et Pin objekt med navnet buzz på pin 14, sat som OUTput, og værdien 0
+# Instantierer et Pin objekt med navnet buzz på pin 4, sat som OUTput, og værdien 0
 buzz = Pin(4, Pin.OUT, value=0)
 
 # Følgende er til temperatursensor komponentet:
@@ -52,7 +52,7 @@ while True:
     # printer tekst strenge det som er i "" efterfulgt af ADC værdierne fra variablerne der holder dem
     print("LDR værdi: ", ldr_val, "Temperatur værdi: ", temp_val, "Potentiometer værdi: ", pot_val)
 
-    # if sætning der er sand hvis ldr_val er mindre end 700
+    # if sætning der er sand hvis ldr_val er mindre end 1500
     if ldr_val < 1500:
         # sætter buzz til 1 (tændt) hvis betingelsen fra if sætningen er sand (True)
         buzz.value(1)
