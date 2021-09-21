@@ -43,8 +43,8 @@ while True:
         # sætter rød og LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
         r.value(not r.value())
         sleep(0.1)
-    # if sætning der er sand hvis pot_val er større end 1500 og (and) mindre end 3000
-    if pot_val > 1500 and pot_val < 3000:
+    # elif sætning der er sand hvis pot_val er større end 1500 og (and) mindre end 3000
+    elif pot_val > 1500 and pot_val < 3000:
         # sætter rød og grøn LED til 0 (slukket)
         r.value(0)
         g.value(0)
@@ -52,8 +52,8 @@ while True:
         y.value(not y.value())
         # venter 0.1 sekund
         sleep(0.1)
-    # if sætning der er sand hvis pot_val er større end 3000
-    if pot_val > 3000:
+    # elif sætning der er sand hvis pot_val er større end 3000
+    elif pot_val > 3000:
         # sætter rød og gul LED til 0 (slukket)
         r.value(0)
         y.value(0)
@@ -62,7 +62,7 @@ while True:
         # venter 0.1 sekund
         sleep(0.1)
 
-     # if sætning der er sand hvis button_val er mindre end 1
+     # elif sætning der er sand hvis button_val er mindre end 1
     if button_val < 1:
        #slukker alle LED'er undtagen rød
        r.value(1)
