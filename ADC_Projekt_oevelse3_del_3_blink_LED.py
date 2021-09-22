@@ -27,7 +27,7 @@ button = Pin(12, Pin.IN)
 while True:
     # Alt der er indrykket til dette niveau køres igen og igen i samme kodeblok
 
-    # pot_val variablen sættes til at indeholde ADC værdien fra pot ved hjælp af read() metoden fra ADC klassen
+    # pot_val variablen sættes til at indeholde ADC værdien fra adc_pot ved hjælp af read() metoden fra ADC klassen
     pot_val = adc_pot.read()
     # printer værdien af pot_val
     print(pot_val)
@@ -40,7 +40,7 @@ while True:
         # sætter grøn og gul LED til 0 (slukket)
         g.value(0)
         y.value(0)
-        # sætter rød og LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
+        # sætter rød LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
         r.value(not r.value())
         sleep(0.1)
     # elif sætning der er sand hvis pot_val er større end 1500 og (and) mindre end 3000
@@ -48,7 +48,7 @@ while True:
         # sætter rød og grøn LED til 0 (slukket)
         r.value(0)
         g.value(0)
-        # sætter rød og LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
+        # sætter gul LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
         y.value(not y.value())
         # venter 0.1 sekund
         sleep(0.1)
@@ -57,7 +57,7 @@ while True:
         # sætter rød og gul LED til 0 (slukket)
         r.value(0)
         y.value(0)
-        # sætter grøn og LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
+        # sætter grøn LED til at skifte til dens modsatte værdi (fra tændt til slukket eller omvendt)
         g.value(not g.value())
         # venter 0.1 sekund
         sleep(0.1)
