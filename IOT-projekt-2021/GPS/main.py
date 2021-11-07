@@ -9,9 +9,9 @@ from machine import Pin
 from time import sleep_ms, sleep
 lib = umqtt_robust2
 # opret en ny feed kaldet map_gps indo på io.adafruit
-mapFeed = bytes('{:s}/feeds/{:s}'.format(b'DIT ADAFRUIT BRUGERNAVN HER!!', b'map_gps/csv'), 'utf-8')
+mapFeed = bytes('{:s}/feeds/{:s}'.format(b'DIT ADAFRUIT BRUGERNAVN HER!!', b'mapfeed/csv'), 'utf-8')
 # opret en ny feed kaldet speed_gps indo på io.adafruit
-speedFeed = bytes('{:s}/feeds/{:s}'.format(b'DIT ADAFRUIT BRUGERNAVN HER!!', b'speed_gps/csv'), 'utf-8')
+speedFeed = bytes('{:s}/feeds/{:s}'.format(b'DIT ADAFRUIT BRUGERNAVN HER!!', b'speedfeed/csv'), 'utf-8')
 while True:
     if lib.c.is_conn_issue():
         while lib.c.is_conn_issue():
