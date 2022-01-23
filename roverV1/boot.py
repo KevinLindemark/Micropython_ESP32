@@ -27,9 +27,5 @@ while station.isconnected() == False:
 
 print('Connection successful')
 print(station.ifconfig())
-frequency = 5000
-motor01 = PWM(Pin(2), frequency)
-motor02 = PWM(Pin(12), frequency)
-motor03 = PWM(Pin(13), frequency)
-motor04 = PWM(Pin(23), frequency)
+
 
